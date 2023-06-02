@@ -4,9 +4,11 @@ kind: Service
 metadata:
   name: postgres-service
 spec:
+  type: LoadBalancer
   selector:
     app: postgres
   ports:
     - protocol: TCP
       port: 5432
       targetPort: 5432
+
